@@ -1,5 +1,5 @@
 
-#📂 YOLOv8 기반 Occlusion 검출 시스템 개발
+#YOLOv8 기반 Occlusion 검출 시스템 개발
 
 ## 1. 프로젝트 개요
 
