@@ -1,5 +1,5 @@
-##🚀 YOLOv8 기반 Occlusion 검출 시스템 개발
-#1. 📌 프로젝트 개요
+🚀 YOLOv8 기반 Occlusion 검출 시스템 개발
+1. 📌 프로젝트 개요
 🎯 목표
 본 프로젝트는 딥러닝 기반 객체 탐지 모델인 YOLOv8을 활용하여 이미지 내 얼굴의 Occlusion(가림 현상)을 자동으로 검출하는 시스템을 개발하는 것을 목표로 합니다. 구체적으로는 'face', 'hat', 'sunglasses', 'accessories' 4가지 클래스를 탐지합니다. 이를 통해 얼굴 인식, 보안, 고객 행동 분석 등 다양한 응용 분야에서 Occlusion 처리에 기여할 수 있습니다.
 
@@ -10,7 +10,7 @@
 
 개발 환경: Google Colab (GPU 가속), Google Drive (데이터 및 모델 저장)
 
-#2. 📂 데이터셋
+2. 📂 데이터셋
 📊 데이터 출처 및 구성
 사용자 정의 데이터셋을 활용하여 Occlusion 감지용 이미지를 수집하고 어노테이션했습니다. 데이터셋은 'face', 'hat', 'sunglasses', 'accessories' 클래스에 대한 어노테이션이 포함된 이미지들로 구성되어 있습니다.
 
@@ -21,7 +21,7 @@ data.yaml 파일을 통해 학습, 검증, 테스트 데이터의 경로 및 클
 
 data.yaml에는 4개의 클래스(face, hat, sunglasses, accessories)가 정의되어 있습니다.
 
-#3. 🧠 모델 학습 및 튜닝
+3. 🧠 모델 학습 및 튜닝
 🏗️ 모델 아키텍처
 YOLOv8n (nano 버전) 모델을 기반으로 학습을 진행했습니다. YOLOv8은 속도와 정확도 면에서 균형 잡힌 성능을 제공하여 실시간 Occlusion 검출에 적합합니다.
 
@@ -51,7 +51,7 @@ sunglasses: Precision: 1.000, Recall: 0.000, mAP50: 0.110, mAP50-95: 0.058
 
 accessories: Precision: 0.418, Recall: 0.578, mAP50: 0.484, mAP50-95: 0.290
 
-#4. 📊 결과 분석 및 시각화
+4. 📊 결과 분석 및 시각화
 📉 학습 지표 그래프
 학습 과정에서 생성된 results.png 파일을 통해 Precision, Recall, mAP, Loss 값의 변화를 시각적으로 확인했습니다. 그래프는 학습이 진행됨에 따라 지표가 안정적으로 개선되었음을 보여줍니다.
 
@@ -61,7 +61,7 @@ confusion_matrix.png 파일을 통해 모델의 클래스별 분류 성능을 �
 🔍 예측 결과 예시
 학습된 모델을 사용하여 새로운 이미지에 대한 Occlusion 탐지 예측을 수행했습니다. 아래 이미지는 모델이 Occlusion을 성공적으로 감지하고 바운딩 박스와 함께 클래스 및 신뢰도 점수를 표시하는 예시입니다.
 
-#5. 💡 결론 및 향후 계획
+5. 💡 결론 및 향후 계획
 🌱 프로젝트를 통해 배운 점
 YOLOv8 모델을 활용한 객체 탐지 파이프라인 구축 및 학습 방법을 익혔습니다.
 
@@ -76,5 +76,5 @@ Google Colab 및 Google Drive 연동을 통해 데이터셋 및 모델을 효율
 
 실시간 시스템 구축: 엣지 디바이스에 모델을 배포하여 실시간 Occlusion 감지 시스템을 구현할 수 있습니다.
 
-#💾 6. 모델 저장 및 접근
+💾 6. 모델 저장 및 접근
 최종 학습된 모델 (best.pt)은 Google Drive의 /content/drive/MyDrive/yolo_occlusion_models_v2/yolo_occlusion_v2.pt 경로에 백업 저장되었습니다.
